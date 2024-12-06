@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운동 성향 테스트</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answer {
+            margin: 5px 0;
+        }
+        #result {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>운동 성향 테스트</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. 당신은 키가 몇인가요?</p>
+            <label for="numInput_height">(미터 단위): </label>
+            <input type="number" id="numInput_height" placeholder="예: 1.75" step="0.01" required>
+        </div>
+
+        <div class="question">
+            <p>2. 당신은 몸무게가 몇인가요?</p>
+            <label for="numInput_weight">(킬로그램 단위): </label>
+            <input type="number" id="numInput_weight" placeholder="예: 70" required>
+        </div>
+
+        <div class="question">
+            <p>3. 당신의 성별은 무엇인가요?</p>
+            <label><input type="radio" name="question3" value="1"> 남자</label><br>
+            <label><input type="radio" name="question3" value="2"> 여자</label>
+        </div>
+
+        <div class="question">
+            <p>4. 당신은 어떤 선택을 할 건가요?</p>
+            <img src="testimage/8.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question4" value="1"> 좋아요! 바로 끝내고 다음 목표로 넘어가죠!</label><br>
+            <label><input type="radio" name="question4" value="2"> 아니요, 이건 너무 힘들어 보이는데… 더 천천히 하고 싶어요.</label>
+
+        </div>
+
+        <div class="question">
+            <p>5. 팀 스포츠 경기 중입니다. 공이 당신 앞에 와 있어요. 이 순간, 당신은?</p>
+            <img src="testimage/10.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question5" value="1"> 바로 공을 잡고 팀원에게 멋지게 패스한다.</label><br>
+            <label><input type="radio" name="question5" value="2"> 잠깐 망설이며 다른 팀원이 먼저 움직이길 기다린다.</label>
+        </div>
+        <div class="question">
+            <p>6. 요즘 핫한 운동 클래스가 오픈했습니다. 한 번 참여해볼래요?</p>
+            <img src="testimage/12.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question6" value="1"> 새로운 경험이라니! 당장 등록하고 가볼래요.</label><br>
+            <label><input type="radio" name="question6" value="2"> 아니요, 익숙한 운동이 더 좋아요</label>
+        </div>
+        <div class="question">
+            <p>7. 혼자서 아침 조깅 중입니다. 어느 순간, 거리 측정 앱에서 알림이 울려요. ‘5km 달성!’ 이때 당신은?"</p>
+            <img src="testimage/9.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question7" value="1"> 좋아, 조금 더 뛰어서 6km까지 도전해볼까?</label><br>
+            <label><input type="radio" name="question7" value="2"> 오늘은 여기까지! 집으로 돌아가야지.</label>
+        </div>
+         <div class="question">
+            <p>8. 체육관에서 트레이너가 물어봅니다. ‘이제 무게를 더 올려볼까요?’ 당신은?</p>
+            <img src="testimage/11.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question8" value="1"> 당연하죠! 무게를 올려야 진짜 운동이죠!</label><br>
+            <label><input type="radio" name="question8" value="2"> 아니요, 지금의 무게가 딱 좋아요.</label>
+        </div>
+        <div class="question">
+            <p>9. 스트레칭이나 요가 클래스를 듣고 있어요. 차분한 음악이 흐르는 이 순간, 당신은?</p>
+            <img src="testimage/13.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question9" value="1"> 너무 좋다. 마음도 몸도 편안해져.</label><br>
+            <label><input type="radio" name="question9" value="2"> 너무 느리고 지루한데, 다른 걸 하고 싶어.</label>
+        </div>
+
+        <!-- 질문 10 -->
+        <div class="question">
+            <p>10. 강렬한 운동으로 500칼로리를 태우는 클래스가 열렸습니다. 지금 바로 참여할래요?</p>
+            <img src="testimage/14.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question10" value="1"> 당연하지! 한 번에 많은 칼로리를 태우는 게 최고야.</label><br>
+            <label><input type="radio" name="question10" value="2"> 아니, 그렇게 힘든 건 별로야. 다른 운동을 할래.</label>
+        </div>
+
+        <!-- 질문 11 -->
+        <div class="question">
+            <p>11. 운동은 친구들과 함께 하는 게 더 재미있다고들 하죠. 지금 친구들이 운동을 같이 하자고 불러요. 당신은?</p>
+            <img src="testimage/16.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question11" value="1"> 좋아! 친구들과 하면 더 즐거울 것 같아!</label><br>
+            <label><input type="radio" name="question11" value="2"> 혼자 하는 운동이 더 편해. 오늘은 패스!</label>
+        </div>
+
+        <!-- 질문 12 -->
+        <div class="question">
+            <p>12. 새로운 운동 기구를 사용하는 체험 클래스에 초대받았습니다. 참여할래요?</p>
+            <img src="testimage/17.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question12" value="1"> 새로운 기구라니! 무조건 도전해봐야지!</label><br>
+            <label><input type="radio" name="question12" value="2"> 익숙하지 않은 건 부담스러워요. 패스할래요.</label>
+        </div>
+
+        <!-- 질문 13 -->
+        <div class="question">
+            <p>13. 장시간 집중력이 필요한 운동, 지금 바로 시작해볼까요?</p>
+            <img src="testimage/18.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question13" value="1"> 좋아요! 꾸준히 도전해서 결과를 내야죠!</label><br>
+            <label><input type="radio" name="question13" value="2"> 장시간은 좀 어려워요. 짧은 운동이 더 좋아요.</label>
+        </div>
+
+        <!-- 질문 14 -->
+        <div class="question">
+            <p>14. 단체 스포츠 이벤트에 초대받았습니다. 참여할래요?</p>
+            <img src="testimage/19.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question14" value="1"> 단체 스포츠라니! 팀워크를 즐길 기회잖아요!</label><br>
+            <label><input type="radio" name="question14" value="2"> 단체 운동은 별로… 개인 운동이 더 좋아요.</label>
+        </div>
+
+        <!-- 질문 15 -->
+        <div class="question">
+            <p>15. 유행하는 운동 프로그램에 등록해볼까요?</p>
+            <img src="testimage/6.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question15" value="1"> 트렌드에 맞는 운동이라니! 바로 도전해야지!</label><br>
+            <label><input type="radio" name="question15" value="2"> 새로운 건 별로… 기존에 하던 게 더 좋아요.</label>
+        </div>
+        <div class="question">
+            <p>16. 운동 중 스스로 신체적 한계를 시험해볼 기회가 생겼습니다. 도전할래요?</p>
+            <img src="testimage/4.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question16" value="1"> 당연하죠! 한계를 넘는 게 중요하죠!</label><br>
+            <label><input type="radio" name="question16" value="2"> 그건 조금 무리일 것 같아요. 다른 방법을 찾을래요.</label>
+        </div>
+
+        <!-- 질문 17 -->
+        <div class="question">
+            <p>17. 운동을 하며 친구들에게 자랑할 때, 당신은?</p>
+            <img src="testimage/2.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question17" value="1"> 나의 운동 성과를 자랑하는 게 너무 즐거워!</label><br>
+            <label><input type="radio" name="question17" value="2"> 그냥 나만의 시간으로 즐길래요. 자랑은 별로예요.</label>
+        </div>
+
+        <!-- 질문 18 -->
+        <div class="question">
+            <p>18. 체력 측정을 할 기회가 생겼습니다. 당신은?</p>
+            <img src="testimage/3.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question18" value="1"> 체력 측정? 그게 바로 내 강점이지!</label><br>
+            <label><input type="radio" name="question18" value="2"> 측정은 별로… 그냥 내 방식대로 하자.</label>
+        </div>
+
+        <!-- 질문 19 -->
+        <div class="question">
+            <p>19. 운동이 끝난 후, 당신은?</p>
+            <img src="testimage/20.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question19" value="1"> 성취감이 느껴져서 기분이 좋아!</label><br>
+            <label><input type="radio" name="question19" value="2"> 운동은 힘들었지만, 끝내서 다행이야.</label>
+        </div>
+
+        <!-- 질문 20 -->
+        <div class="question">
+            <p>20. 운동 후 회복을 위한 루틴을 유지하고 있나요?</p>
+            <img src="testimage/5.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question20" value="1"> 운동 후 회복은 매우 중요해! 철저히 관리해요.</label><br>
+            <label><input type="radio" name="question20" value="2"> 별로 회복에 신경 쓰지 않아요. 운동이 끝나면 그만이에요.</label>
+        </div>
+
+        <!-- 질문 21 -->
+        <div class="question">
+            <p>21. 체력을 높이기 위해 추가로 무엇을 해볼까요?</p>
+            <img src="testimage/1.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question21" value="1"> 유산소 운동을 추가해볼래요.</label><br>
+            <label><input type="radio" name="question21" value="2"> 근력 운동을 더 많이 해야겠어요.</label>
+        </div>
+
+        <!-- 질문 22 -->
+        <div class="question">
+            <p>22. 운동하면서 중요한 것은 무엇인가요?</p>
+            <img src="testimage/7.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question22" value="1"> 운동량보다 결과가 중요해요.</label><br>
+            <label><input type="radio" name="question22" value="2"> 운동을 하는 과정이 더 중요해요.</label>
+        </div>
+
+        <!-- 질문 23 -->
+        <div class="question">
+            <p>23. 목표를 설정하고 운동을 할 때, 가장 중요한 것은?</p>
+            <img src="testimage/15.jpg" alt="사진불러오기오류" width="300"><br>
+            <label><input type="radio" name="question23" value="1"> 목표 달성! 목표를 향해 달려가는 것이 중요해요.</label><br>
+            <label><input type="radio" name="question23" value="2"> 운동의 즐거움! 목표보다는 운동 그 자체를 즐기는 게 중요해요.</label>
+        </div>
+
+        <button type="button" onclick="calculateResults()">결과 보기</button>
+    </form>
+
+    <div id="result" style="display: none;">
+        <h2>최종 결과</h2>
+        <p id="highestTypesP"></p>
+        <p id="highestTypesS"></p>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f8fb; /* 배경색 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수평 가운데 정렬 */
+    justify-content: flex-start;
+    height: 100vh; /* 화면 전체 높이 사용 */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #004184; /* 제목 색상 */
+    width: 100%;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #1ca9e1; /* 소제목 색상 */
+}
+
+/* 질문 영역 */
+.question {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px; /* 최대 너비 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.question p {
+    font-size: 1.1rem;
+    color: #004184;
+    margin-bottom: 10px;
+}
+
+.question label {
+    font-size: 1rem;
+    color: #004184;
+    margin-left: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 이미지 크기 조정 */
+.question img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px; /* 이미지와 텍스트 간격 추가 */
+}
+
+/* 버튼 스타일 */
+button {
+    display: block;
+    width: 80%;
+    max-width: 300px; /* 최대 너비 설정 */
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #1ca9e1; /* 버튼 색상 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: auto; /* 왼쪽 여백 자동으로 추가 */
+    margin-right: auto; /* 오른쪽 여백 자동으로 추가 */
+}
+
+button:hover {
+    background-color: #004184;
+}
+
+/* 결과 영역 */
+#result {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px; /* 최대 너비 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+/* 결과 스타일 */
+#result h2 {
+    font-size: 1.5rem;
+    color: #004184;
+}
+
+#result p {
+    font-size: 1.2rem;
+    color: #004184;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .question {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    #result h2 {
+        font-size: 1.3rem;
+    }
+
+    #result p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운동 스타일 테스트</title>
+    <link rel="stylesheet" href="test_start.css">    
+</head>
+<body>
+
+    <h1>운동에도 나만의 성격이 있다고??</h1>
+
+    <!-- 이미지 -->
+    <div class="image-container">
+        <img id="startImage" src="start_img/1.png" alt="운동 이미지">
+    </div>
+
+    <!-- 소제목 -->
+    <h2>단 3분이면 알아보는 나의 운동 스타일</h2>
+
+    <!-- 버튼 -->
+    <button onclick="location.href='test.html'">지금 확인하기 - 이미 50,000명이 도전했어요!</button>
+
+</body>
+<script>
+    window.onload = function() {
+        const img = document.getElementById("startImage");
+        let num = 1;  // 초기값 1
+
+        // 2초마다 이미지를 변경하는 setInterval 사용
+        setInterval(function() {
+            img.src = "start_img/" + num + ".png";  // 이미지 변경
+            num += 1;  // num을 1 증가
+            if (num > 7) {
+                num = 1;  // num이 7을 초과하면 다시 1로 돌아감
+            }
+        }, 2000);  // 2000ms = 2초마다 이미지 변경
+    };
+</script>
+</html>

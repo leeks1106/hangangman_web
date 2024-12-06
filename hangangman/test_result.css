@@ -1,0 +1,95 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f8fb; /* 배경색 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수평 가운데 정렬 */
+    justify-content: flex-start;
+    height: 100vh; /* 화면 전체 높이 사용 */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #004184; /* 제목 색상 */
+    width: 100%;
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #1ca9e1; /* 소제목 색상 */
+}
+
+/* 결과 영역 */
+div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px; /* 최대 너비 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+/* 이미지 스타일 */
+#resultImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* 버튼 스타일 */
+button {
+    display: block;
+    width: 80%;
+    max-width: 300px; /* 최대 너비 설정 */
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #1ca9e1; /* 버튼 색상 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: auto; /* 왼쪽 여백 자동으로 추가 */
+    margin-right: auto; /* 오른쪽 여백 자동으로 추가 */
+}
+
+button:hover {
+    background-color: #004184;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    div {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}

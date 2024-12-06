@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>한강갱</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index_style.css"> <!-- 별도의 CSS 파일 연결 -->
+    <!-- 필터 선택 -->
+  <div id="filters">
+    <select id="regionFilter">
+      <option value="">모든 지역</option>
+      <option value="서울특별시">서울특별시</option>
+      <option value="경기도">경기도</option>
+      <option value="부산광역시">부산광역시</option>
+      <option value="인천광역시">인천광역시</option>
+      <option value="대구광역시">대구광역시</option>
+      <option value="경상북도">경상북도</option>
+      <option value="강원특별자치도">강원특별자치도</option>
+      <option value="충청남도">충청남도</option>
+      <option value="경상남도">경상남도</option>
+      <option value="울산광역시">울산광역시</option>
+      <option value="충청북도">충청북도</option>
+
+      <!-- 필요한 지역을 추가할 수 있습니다 -->
+    </select>
+
+    <select id="facilityTypeFilter">
+      <option value="">모든 종류</option>
+      <option value="생활체육관">생활체육관</option>
+      <option value="수영장">수영장</option>
+      <option value="구기체육관">구기체육관</option>
+      <option value="골프연습장">골프연습장</option>
+      <option value="기타시설">기타시설</option>
+      <option value="구기체육관">구기체육관</option>
+      <option value="빙상장">빙상장</option>
+      <option value="테니스장">테니스장</option>
+      <option value="축구장">축구장</option>
+      <option value="간이운동장">간이운동장</option>
+      <option value="야구장">야구장</option>
+      <!-- 필요한 시설 종류를 추가할 수 있습니다 -->
+    </select>
+    <select id="test_type">
+      <option value="all">모든 종류</option>
+      <option value="순발력+사회형">순발력 + 사회형</option>
+      <option value="순발력+목표지향형">순발력 + 목표지향형</option>
+      <option value="순발력+자기계발형">순발력 + 자기계발형</option>
+      <option value="순발력+트렌드 추종형">순발력 + 트렌드 추종형</option>
+      <option value="지구력+사회형">지구력 + 사회형</option>
+      <option value="지구력+목표지향형">지구력 + 목표지향형</option>
+      <option value="지구력+자기계발형">지구력 + 자기계발형</option>
+      <option value="지구력+트렌드 추종형">지구력 + 트렌드 추종형</option>
+      <option value="유연성+사회형">유연성 + 사회형</option>
+      <option value="유연성+목표지향형">유연성 + 목표지향형</option>
+      <option value="유연성+자기계발형">유연성 + 자기계발형</option>
+      <option value="유연성+트렌드 추종형">유연성 + 트렌드 추종형</option>
+      <option value="피지컬+사회형">피지컬 + 사회형</option>
+      <option value="피지컬+목표지향형">피지컬 + 목표지향형</option>
+      <option value="피지컬+자기계발형">피지컬 + 자기계발형</option>
+      <option value="피지컬+트렌드 추종형">피지컬 + 트렌드 추종형</option>
+      <!-- 필요한 시설 종류를 추가할 수 있습니다 -->
+    </select>
+
+    <button onclick="applyFilters()">필터 적용</button>
+  </div>
+
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=9oy4so5qmj"></script>
+
+    <style>
+        /* html과 body 태그의 높이를 100%로 설정 */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* 지도 div를 화면 크기에 맞게 설정 */
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div> <!-- 지도 표시 영역 -->
+
+    <script src="map.js"></script> <!-- map.js라는 파일을 불러옴 -->
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* 기본 스타일 */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 지도 영역 */
+#map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 필터 영역 스타일 */
+#filters {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 필터 제목 */
+#filters select, #filters button {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    outline: none;
+    width: 100%;
+}
+
+/* 필터의 버튼 스타일 */
+#filters button {
+    background-color: #1ca9e1; /* 밝은 파랑 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filters button:hover {
+    background-color: #004184; /* 어두운 파랑 */
+}
+
+/* 셀렉트 박스 스타일 */
+#filters select {
+    background-color: #f2f8fb; /* 밝은 배경 */
+    border: 1px solid #1ca9e1; /* 밝은 파랑 */
+}
+
+#filters select:focus {
+    border-color: #004184; /* 어두운 파랑 */
+}
+
+/* 버튼과 셀렉트 박스의 포커스 상태 */
+#filters select:focus, #filters button:focus {
+    outline: none;
+}
+
+/* 필터와 버튼 사이 간격 조정 */
+#filters select, #filters button {
+    margin-bottom: 10px;
+}
+
+/* 모바일 친화적인 스타일 (반응형) */
+@media (max-width: 768px) {
+    #filters {
+        top: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+    }
+
+    #filters select, #filters button {
+        width: 100%;
+    }
+
+}
+/* 정보창 기본 스타일 */
+.naver-info-window {
+    background-color: #ffffff;  /* 배경색 */
+    border-radius: 8px;  /* 둥근 모서리 */
+    padding: 15px;  /* 패딩 추가 */
+    font-family: 'Arial', sans-serif;  /* 폰트 설정 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* 그림자 효과 */
+    max-width: 350px;  /* 최대 너비 */
+    font-size: 14px;  /* 글자 크기 */
+    color: #333333;  /* 텍스트 색 */
+}
+
+/* 정보창 제목 스타일 */
+.naver-info-window strong {
+    font-size: 16px;  /* 제목 크기 */
+    font-weight: bold;  /* 볼드 처리 */
+    color: #004184;  /* 제목 색 */
+}
+
+/* 주소 및 프로그램명 스타일 */
+.naver-info-window .address {
+    margin-top: 10px;  /* 상단 마진 */
+    font-size: 13px;  /* 작은 폰트 크기 */
+    color: #555555;  /* 어두운 회색 */
+}
+
+.naver-info-window .program-type {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #1ca9e1;  /* 파란색 */
+}
+
+/* 링크 스타일 */
+.naver-info-window a {
+    margin-top: 10px;
+    color: #1ca9e1;  /* 링크 색 */
+    text-decoration: none;  /* 밑줄 제거 */
+    font-weight: bold;
+}
+
+.naver-info-window a:hover {
+    text-decoration: underline;  /* 호버 시 밑줄 */
+}

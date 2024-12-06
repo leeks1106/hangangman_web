@@ -1,0 +1,125 @@
+/* 기본 스타일 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f8fb; /* 배경색 */
+    color: #004184; /* 기본 글씨 색상 */
+    line-height: 1.6;
+}
+
+/* 중앙 정렬을 위한 기본 스타일 */
+.container {
+    width: 100%;
+    max-width: 1200px; /* 최대 너비 1200px */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 제목 스타일 */
+h1, h2 {
+    text-align: center;
+    color: #004184; /* 글씨 색상 */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #1ca9e1; /* 소제목 색상 */
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #1ca9e1; /* 강조 색상 */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 300px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004184; /* 버튼 hover 시 색상 */
+}
+
+/* 이미지 스타일 */
+.image-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+img {
+    width: 100%;
+    max-width: 500px; /* 이미지 최대 크기 */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 90%; /* 버튼의 너비를 화면 크기에 맞게 조정 */
+    }
+
+    img {
+        max-width: 90%; /* 이미지 크기 축소 */
+    }
+}
+
+/* PC 스타일 */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 50px; /* PC에서 여백을 더 넓게 */
+    }
+}
+
+/* 모바일 및 작은 화면에서 더 깔끔한 디자인을 위해 텍스트 중앙 정렬 */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    button {
+        padding: 12px 20px;
+    }
+
+    .container {
+        padding: 15px; /* 작은 화면에서는 여백을 줄임 */
+    }
+}
